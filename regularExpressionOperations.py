@@ -47,3 +47,31 @@ import re
     digit_regex = re.compile(r'\d')
     result = digit_regex.match('78baxter')
     print(result)
+
+    def example_6():
+    '''
+    >>> example_6()
+    None
+    '''
+    digit_regex = re.compile(r'\d')
+    result = digit_regex.match('Jet78')
+    print(result)
+
+
+    def example_7():
+    '''
+    >>> example_7()
+    <_sre.SRE_Match object; span=(0, 1), match='b'>
+    '''
+    digit_regex = re.compile(r'\w')
+    result = digit_regex.match('bMeyer468')
+    print(result)
+    
+    def example_8():
+    '''
+    >>> example_8()
+    <_sre.SRE_Match object; span=(4, 10), match='aaaaaa'>
+    '''
+    regex = re.compile(r'a+')
+    result = regex.search('bbbbaaaaaabcd')
+    print(result)
